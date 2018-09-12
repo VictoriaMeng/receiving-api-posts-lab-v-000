@@ -29,6 +29,8 @@
       posting.done(function(data) {
         $("#title").text(data["title"]);
         $("#desc").text(data["description"]);
+        $("#price").text(data["price"]);
+        $("#inventory").text(data["inventory"]);
       });
     });
   });
