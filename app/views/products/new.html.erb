@@ -14,7 +14,7 @@
   <%= f.submit "submit" %>
 <% end %>
 
-<div id="productPost">
+<div id="posting">
   <h2 id="title"></h2>
   <p id="desc"></p>
 </div>
@@ -25,7 +25,7 @@
       e.preventDefault();
       const values = $(this).serialize();
       const posting = $.post('/products', values);
-
+      
     });
   });
 </script>
