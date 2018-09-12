@@ -27,7 +27,7 @@
       e.preventDefault();
       const posting = $.post('/products', $(this).serialize());
       posting.done(function(data) {
-        $("#title").text(data["title"]);
+        $("name").text(data["name"]);
         $("#desc").text(data["description"]);
         $("#price").text(data["price"]);
         $("#inventory").text(data["inventory"]);
