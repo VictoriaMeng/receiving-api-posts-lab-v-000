@@ -1756,3 +1756,22 @@ Processing by ProductsController#create as */*
 [active_model_serializers]   [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 22]]
 [active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (46.9ms)
 Completed 201 Created in 93ms (Views: 80.9ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/products/new" for 45.56.172.201 at 2018-09-12 04:56:13 +0000
+Cannot render console from 45.56.172.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 45.56.172.201 at 2018-09-12 04:56:19 +0000
+Cannot render console from 45.56.172.201! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eHFos/XM2KqygrikMfIOz/yVKpYJl89iIX+HEDN90Ar6ii1Rdu5/XNKuWW9+Zqe/HxtcoLAj8p3ePUGmxbHnqw==", "product"=>{"name"=>"My Product", "price"=>"1", "description"=>"test desc", "inventory"=>"1"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "My Product"], ["description", "test desc"], ["inventory", 1], ["price", 1], ["created_at", "2018-09-12 04:56:19.237561"], ["updated_at", "2018-09-12 04:56:19.237561"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 23]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (1.85ms)
+Completed 201 Created in 8ms (Views: 2.2ms | ActiveRecord: 3.2ms)
