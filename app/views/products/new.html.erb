@@ -25,7 +25,8 @@
       e.preventDefault();
       const values = $(this).serialize();
       const posting = $.post('/products', values);
-      
+      $("#title").text(data["title"]);
+      $("#desc").text(data["description"]);
     });
   });
 </script>
